@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500;
+        background : #c6bfac;
+    }
+}
+@layer components {
+    nav .link.nuxt-link-active {
+        @apply underline underline-offset-1;
+    }
+}
+
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 23px;
+}
+h3 {
+    font-size: 20px;
+}
+h4, a, p {
+    font-size: 18px;
+}
+
+a, p {
+    line-height: 21px;
+}
+
+/* Carousel */
+.carousel-interior .ssr-carousel-dots {
+    justify-content: flex-start;
+    margin-top     : 13px;
+}
+.carousel-interior .ssr-carousel-dot-button {
+    margin-right: 15px
+}
+.carousel-interior .ssr-carousel-dot-icon {
+    margin      : 0px 5px;
+    height      : 10px;
+    width       : 10px;
+    border-width: 1px;
+    border-color: black;
+    opacity     : 1;
+}
+.carousel-interior .ssr-carousel-dot-button:first-child .ssr-carousel-dot-icon {
+    margin-left: 0px;
+}
+.carousel-interior .ssr-carousel-dot-icon {
+    margin      : 0px 5px;
+    height      : 10px;
+    width       : 10px;
+    border-width: 1px;
+    border-color: black;
+    opacity     : 1;
+}
+.carousel-interior :not([disabled]) > .ssr-carousel-dot-icon {
+    opacity: 1;
+}
+.carousel-interior [disabled] > .ssr-carousel-dot-icon {
+    background: black;
+}
