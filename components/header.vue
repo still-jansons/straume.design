@@ -4,7 +4,7 @@
             <img src="~/assets/images/Logo.svg" alt="Logo" class="logo">
         </NuxtLink>
         <img src="~/assets/images/LogoText.svg" alt="straume" class="logo-text center">
-        <button class="lang capitalize">LV</button>
+        <!-- <button class="lang capitalize">LV</button> -->
     </div>
 </template>
 

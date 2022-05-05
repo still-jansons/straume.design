@@ -1,5 +1,12 @@
 <template>
-    <Stories :stories="interiors" imageFolder="interiors" parentUrl="interiors"/>
+    <div class="list h-full overflow-x-auto flex">
+        <Interior v-for="(interior, index) in interiors"
+        :key="index"
+        :interior="interior"
+        :isLastItem="(index > 0 && index + 1 == interiors.length)"
+        v-on:slug-change="selected_slug = $event"
+        :selectedSlug="selected_slug"/>
+    </div>
 </template>
 <script>
 import { interiors } from "@/assets/data/interiors.js"
@@ -8,7 +15,8 @@ export default {
     data() {
         return {
             title: 'Interiors',
-            interiors
+            interiors,
+            selected_slug: null
         }
     },
     head() {

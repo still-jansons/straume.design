@@ -58,5 +58,13 @@ export default {
                 autoprefixer: {},
             },
         },
+        extend(config, ctx) {
+            config.module.rules.push({
+                enforce: 'pre',
+                test: /\.txt$/,
+                loader: 'raw-loader',
+                exclude: /(node_modules)/
+            });
+        }
     }
 }

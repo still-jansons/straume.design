@@ -4,7 +4,7 @@
         v-for="(link, index) in links"
         :key="index"
         :to="link.url"
-        class="link">{{ link.title }}</NuxtLink>
+        class="link decoration-1">{{ link.title }}</NuxtLink>
     </nav>
 </template>
 
@@ -45,9 +45,10 @@ export default {
         justify-content: space-between;
         margin         : 0px 40px;
         .link {
-            margin-bottom: 30px;
-            font-size    : 20px;
-            line-height  : 23px;
+            margin-bottom        : 30px;
+            font-size            : 20px;
+            line-height          : 23px;
+            text-underline-offset: 2px;
         }
     }
 </style>

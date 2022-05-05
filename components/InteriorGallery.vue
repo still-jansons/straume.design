@@ -2,13 +2,13 @@
     <div class="gallery-wrapper flex flex-col"
     :class="{reverse: paginationOnTop}">
         <div class="image flex"
-        :class="{'flex-row-reverse': isLastStory}">
+        :class="{'flex-row-reverse': isLastItem}">
             <img :src="require(`~/assets/images/${imagesFolder}/${images[selected_image]}.jpg`)"
             :alt="`${altText} (${images[selected_image]})`">
             <div class="relative">
                 <div v-show="showInfo"
                 class="info-box bg-primary-variant"
-                :class="isLastStory ? 'left' : 'right'">
+                :class="isLastItem ? 'left' : 'right'">
                     <p class="whitespace-pre font-normal">{{ info }}</p>
                 </div>
             </div>
@@ -31,7 +31,7 @@ export default {
         'imagesFolder',
         'images',
         'info',
-        'isLastStory',
+        'isLastItem',
         'showInfo',
         'altText',
         'paginationOnTop'

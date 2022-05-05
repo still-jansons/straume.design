@@ -71,3 +71,10 @@ p.description {
 .carousel-interior [disabled] > .ssr-carousel-dot-icon {
     background: black;
 }
+
+/* STORIES SECTION */
+.story-text-wrapper > p {
+    font-size  : 15px;
+    font-weight: 400;
+}
+/*  */
