@@ -1,23 +1,21 @@
 backend:
-    name: git-gateway
-    branch: master
-
-publish_mode: editorial_workflow
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
 
 media_folder: static/uploads
 public_folder: /uploads
 
 collections:
-    - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    format: "frontmatter"
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    format: 'frontmatter'
     create: true
-    slug: "{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
-        preview: false
+      preview: false
     fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
